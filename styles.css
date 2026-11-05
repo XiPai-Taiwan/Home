@@ -1,4 +1,4 @@
-@font-face { font-family: FontAwesome; src: url("assets/2adefcbc041e7d18.bin") format("woff2"), url("assets/ba0c59deb5450f5c.bin") format("woff"), url("assets/aa58f33f239a0fb0.bin") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FontAwesome; src: url("2adefcbc041e7d18.bin") format("woff2"), url("ba0c59deb5450f5c.bin") format("woff"), url("aa58f33f239a0fb0.bin") format("truetype"); font-weight: normal; font-style: normal; }
 h2, h3 { font-family: inherit; font-weight: 500; line-height: inherit; color: inherit; }
 h2, h3 { margin-top: 20px; margin-bottom: 10px; }
 h2 { font-size: 1.5em; }
@@ -110,7 +110,7 @@ a:hover { color: rgb(209, 160, 127); }
 #nav ul li .subnav a:hover { background: rgba(212, 200, 200, 0.1); }
 #nav ul li .subnav a span { max-width: 278px; }
 .fcol h2 { color: rgb(68, 68, 68); }
-#wrap { background-color: rgb(255, 255, 255); background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("assets/background.png"); background-repeat: no-repeat; background-position: right bottom; background-size: 100% 100%, 60% auto; }
+#wrap { background-color: rgb(255, 255, 255); background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("background.png"); background-repeat: no-repeat; background-position: right bottom; background-size: 100% 100%, 60% auto; }
 #main-wrap { background: none; }
 body { background: none; color: rgb(51, 51, 51); font-size: 13px; font-family: 微軟正黑體, Arial, Helvetica, sans-serif; }
 .row { margin-left: 0px; margin-right: 0px; }
