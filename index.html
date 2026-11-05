@@ -1,12 +1,541 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XiPai Home</title>
-</head>
-<body>
-    <h1>XiPai Home</h1>
-    <p>網站建立成功！</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://xipai-taiwan.github.io/Home/" rel="canonical">
+    <title>希派科技</title>
+    <meta name="description" content="希派科技前身為英國 LGC 集團在中國設立的標準物質及能力驗證樣品研製基地，主要生產 LGC 旗下 DRE品牌液標產品。擁有 2000m² 參照國際一流標準打造的標準物質研發、生產及檢測實驗室場地，以及行業領先的標準品生產檢測硬體設施及軟體配套，於 2019 年和 2021 年成功申報8種溶液類國家二級標準物質，於2020 年通過 ISO17034 認可，取得 RMP 資質 , 於 2024 年通過 ISO9001 品質管制、ISO14001 環境管理、ISO45001 職業健康安全三體系認證。未來，希派科技將在沿襲 LGC 標準品生產工藝、品質控制及管理標準的基礎上，秉承“為品質生活傳遞信任”的理念，不斷創新，持續為客戶提供高品質的標準物質產品及行業解決方案。">
+    <link href="assets/favicon.jpg" rel="icon" sizes="16x16" type="image/jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="rwd-wrapper">
+      <div id="wrap">
+        <div id="header">
+          <div class="topnavbar">
+            <div class="container">
+              <div id="logo">
+                <a href="https://xipai-taiwan.github.io/Home/">
+                  <img alt="希派科技" id="photoLogo" src="assets/logo.png">
+                </a>
+              </div>
+              <nav id="nav">
+                <ul>
+                  <li class="about-us first">
+                    <a data-local-control="true" href="#">公司介紹</a>
+                  </li>
+                  <li class="product has-subnav">
+                    <a data-local-control="true" href="#">產品介紹</a>
+                    <ul class="subnav">
+                      <li class="no-subnav">
+                        <a data-local-control="true" href="#">標準品</a>
+                      </li>
+                      <li class="no-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">客製化 標準品</a>
+                        </div>
+                      </li>
+                      <li class="no-subnav">
+                        <div>&nbsp;</div>
+                      </li>
+                      <li class="has-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">A. 樣品過濾</a>
+                        </div>
+                        <ul class="subnav">
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">A1. 針頭過濾器／針頭過濾頭／小飛碟</a>
+                            </div>
+                          </li>
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">A2. 濾膜 / 濾紙</a>
+                            </div>
+                            <ul class="subnav">
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">A2-1. 過濾膜（實驗室 / 電子 / 化工 / 醫療 / 食品）</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">A2-2. 定性定量濾紙</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">A2-3. 玻纖濾紙</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">A2-4. 圓筒濾紙（石英 / 玻纖 / 纖維）</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="has-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">B. 實驗室檢驗產品 / 耗材</a>
+                        </div>
+                      </li>
+                      <li class="has-subnav">
+                        <a data-local-control="true" href="#">C. 層析零配件 / 耗材 </a>
+                      </li>
+                      <li class="has-subnav">
+                        <ul class="subnav">
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">C1. 固相萃取/蛋白層析/合成空柱</a>
+                            </div>
+                            <ul class="subnav">
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C1-1. 固相萃取空柱空柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C1-2. 蛋白層析空柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C1-3. 過濾柱</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">C2. 液相層析HPLC</a>
+                            </div>
+                            <ul class="subnav">
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C2-1. HPLC層析管柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C2-2. HPLC 燈座(來自日本)</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">C4. 固相層析 SPE </a>
+                            </div>
+                            <ul class="subnav">
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C4-1. 聚合物SPE柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C4-2. 矽膠基質 SPE柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C4-3. 吸附型 SPE柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C4-4. 真菌毒素免疫親和柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C4-5. 混合型 SPE柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C4-6. 專用型 SPE柱</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C4-8. 固相萃取SPE裝置匣</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="no-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">C5. 薄層層析 TLC</a>
+                            </div>
+                          </li>
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">C6. QuEChERS</a>
+                            </div>
+                            <ul class="subnav">
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-1. QuEChERS農藥檢驗方法</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-2.QuEChERs 蘇丹紅色素檢驗方法</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-3.QuEChERs禽畜產品中殘留農藥檢驗方法－多重殘留分析方法 </a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-4.食品中多環芳香族碳氫化合物之檢驗方法</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-A. 檢測實例-蔬果</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-B. 檢測實例-肉類</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-C. 檢測實例-醫療</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-D. 檢測實例-其它</a>
+                                </div>
+                              </li>
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">C6-8.陶瓷均質石</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="has-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">J. 化學溶劑 / 試劑</a>
+                        </div>
+                      </li>
+                      <li class="has-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">K. Reagecon標準品</a>
+                        </div>
+                        <ul class="subnav">
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">K1. Reagecon介紹</a>
+                            </div>
+                            <ul class="subnav">
+                              <li class="no-subnav">
+                                <div>
+                                  <a data-local-control="true" href="#">K1-1. Reagecon公司的認證</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="has-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">L. CPAChem 標準品 (客製化)</a>
+                        </div>
+                        <ul class="subnav">
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">L1. 無機認證標準物質</a>
+                            </div>
+                          </li>
+                          <li class="has-subnav">
+                            <div>
+                              <a data-local-control="true" href="#">L2. 有機認證參考物質</a>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dm has-subnav">
+                    <a data-local-control="true" href="#">型錄DM</a>
+                    <ul class="subnav">
+                      <li class="no-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">標準品</a>
+                        </div>
+                      </li>
+                      <li class="no-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">實驗室檢驗產品 / 耗材</a>
+                        </div>
+                      </li>
+                      <li class="no-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">一般耗材</a>
+                        </div>
+                      </li>
+                      <li class="no-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">層析零配件 / 耗材</a>
+                        </div>
+                      </li>
+                      <li class="no-subnav">
+                        <div>
+                          <a data-local-control="true" href="#">化學溶劑 / 試劑</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="news">
+                    <a data-local-control="true" href="#">最新消息</a>
+                  </li>
+                  <li class="contact-us last">
+                    <a data-local-control="true" href="#">聯絡我們</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <section id="banner" class="hero-carousel" aria-label="產品輪播" data-interval="3000">
+            <img src="assets/banner-xipai-logo.png" alt="希派科技 XiPai Technology" width="1400" height="350" class="hero-slide is-active" aria-hidden="false">
+            <img src="assets/banner-quechers.png" alt="QuEChERS 萃取粉劑與 dSPE 純化管" width="1400" height="350" class="hero-slide" aria-hidden="true">
+            <img src="assets/banner-xipai.png" alt="希派標準物質與產品" width="1400" height="350" class="hero-slide" aria-hidden="true">
+          </section>
+        </div>
+        <div class="main-container" id="main-wrap">
+          <div class="fcol fcol-2">
+            <div class="container">
+              <div class="edit-area" id="nicedit_1">
+                <div class="row">
+                  <div class="row">
+                    <div class="col-1">
+                      <h2 class="text-justify">
+                        <span class="text-18">
+                          <span class="font-ming">
+                            <span class="font-hei">希派科技前身為英國 LGC 集團在中國設立的標準物質及能力驗證樣品研製基地，主要生產 LGC 旗下 DRE品牌液標產品。擁有 2000m² 參照國際一流標準打造的標準物質研發、生產及檢測實驗室場地，以及行業領先的標準品生產檢測硬體設施及軟體配套，於 2019 年和 2021 年成功申報8種溶液類國家二級標準物質，於2020 年通過 ISO17034 認可，取得 RMP 資質 , 於 2024 年通過 ISO9001 品質管制、ISO14001 環境管理、ISO45001 職業健康安全三體系認證。未來，希派科技將在沿襲 LGC 標準品生產工藝、品質控制及管理標準的基礎上，秉承“為品質生活傳遞信任”的理念，不斷創新，持續為客戶提供高品質的標準物質產品及行業解決方案。</span>
+                          </span>
+                        </span>
+                      </h2>
+                      <p>&nbsp;</p>
+                      <h2 class="text-center">
+                        <span class="tagline">
+                          <strong>為品質生活傳遞信任<br>
+                            希派科技為您的分析數據精準把關</strong>
+                        </span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1 text-center">
+                    <div class="row">
+                      <div class="col-3">&nbsp;</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="news-heading section-heading">
+                      <img src="assets/NEWS.png" alt="最新消息" width="228" class="section-heading-image">
+                    </p>
+                    <p class="text-left">
+                      <span class="text-12">
+                        <span class="text-black">
+                          <b>◆ </b>
+                        </span>
+                      </span>
+                      <span class="text-black">
+                        <span class="text-16">
+                          <span class="text-red">
+                            <a data-local-control="true" href="#" class="text-red">
+                              <strong>QuEChERS 創新樣品前處理技術</strong>
+                            </a>
+                          </span>
+                          <a data-local-control="true" href="#" class="text-red">
+                            <strong>
+                            </strong>
+                          </a>
+                        </span>
+                        <a data-local-control="true" href="#" class="text-red">
+                          <strong>
+                          </strong>
+                        </a>
+                      </span>&nbsp;<span class="news-date">2026-09-07</span>
+                    </p>
+                    <p class="text-left">
+                      <span class="text-20-black">
+                        <strong>
+                          <span class="text-purple">
+                            <span class="text-16">
+                              <span class="text-12">
+                                <span class="text-black">
+                                  <span class="text-dark">◆ </span>
+                                </span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="text-purple">
+                            <span class="text-16">
+                              <span class="text-12">
+                                <span class="text-black">
+                                  <span class="text-dark">
+                                    <span class="text-navy">
+                                      <a data-local-control="true" href="#" class="text-navy">
+                                        <span class="text-14">如何選擇一款適合的標準品</span>
+                                      </a>
+                                    </span>
+                                  </span>
+                                </span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="text-purple">
+                            <span class="text-16">
+                              <span class="text-12">
+                                <span class="text-black">
+                                  <span class="text-dark">
+                                    <span class="text-navy">
+                                      <a data-local-control="true" href="#" class="text-navy">
+                                        <span class="text-14">
+                                          <span class="news-date">2026-08-09</span>
+                                        </span>
+                                      </a>
+                                    </span>
+                                  </span>
+                                </span>
+                              </span>
+                            </span>
+                          </span>
+                        </strong>
+                      </span>
+                    </p>
+                    <p class="text-left">
+                      <span class="text-black">
+                        <span class="news-date">&nbsp;</span>
+                      </span>
+                    </p>
+                    <p>&nbsp;</p>
+                    <h2 class="text-left">&nbsp;</h2>
+                  </div>
+                  <div class="col-2">
+                    <p class="product-heading section-heading">
+                      <img src="assets/Product.png" alt="自有品牌" width="228" class="section-heading-image">
+                    </p>
+                    <div class="brand-logos">
+                      <img src="assets/logo.png" alt="希派科技" width="726" height="342">
+                      <img src="assets/lab-partner.png" alt="Lab Partner" width="771" height="188">
+                    </div>
+                    <h2 class="col-2 text-center">&nbsp;</h2>
+                  </div>
+                </div>
+                <h3 class="hot-products-heading section-heading">
+                  <img src="assets/hot-product.png" alt="熱銷產品" width="228" class="section-heading-image">
+                </h3>
+                <div class="row">
+                  <h2 class="col-4 text-center">
+                    <a data-local-control="true" href="#" title="希派™ 標準品">
+                      <img src="assets/xipai-standards.png" alt="希派™ 標準品" width="222" height="167">
+                    </a>
+                    <br>
+                    <span class="product-caption">希派™ 標準品</span>
+                  </h2>
+                  <h2 class="col-4 text-center">
+                    <a data-local-control="true" href="#" title="QuEChERS 萃取用粉劑">
+                      <img src="assets/quechers-extraction.png" alt="QuEChERS 萃取用粉劑" width="222" height="167">
+                    </a>
+                    <br>
+                    <span class="product-caption">QuEChERS 萃取用粉劑</span>
+                  </h2>
+                  <h2 class="col-4 text-center">
+                    <a data-local-control="true" href="#" title="QuEChERS 淨化用離心管">
+                      <img src="assets/quechers-cleanup.png" alt="QuEChERS 淨化用離心管" width="222" height="167">
+                    </a>
+                    <br>
+                    <span class="product-caption">QuEChERS 淨化用離心管</span>
+                  </h2>
+                  <h2 class="col-4 text-center">
+                    <a data-local-control="true" href="#" title="QuEChERS 均質石">
+                      <img src="assets/quechers-ceramic.png" alt="QuEChERS 均質石" width="222" height="167">
+                    </a>
+                    <br>
+                    <span class="product-caption">QuEChERS <strong>均質石</strong></span>
+                  </h2>
+                </div>
+                <div class="row">
+                  <h2 class="col-4 text-center">
+                    <a data-local-control="true" href="#" title="CNW™ C18管柱">
+                      <img src="assets/cnw-c18.png" alt="CNW™ C18管柱" width="222" height="167">
+                    </a>
+                    <br>
+                    <span class="product-caption">CNW™ C18管柱</span>
+                  </h2>
+                  <h2 class="col-4 text-center">
+                    <a data-local-control="true" href="#" title="CNW™ 專用管柱">
+                      <img src="assets/cnw-special-columns.png" alt="CNW™ 專用管柱" width="222" height="167">
+                    </a>
+                    <br>
+                    <span class="product-caption">CNW™ 專用管柱</span>
+                  </h2>
+                  <h2 class="col-4 text-center">
+                    <a data-local-control="true" href="#" title="LGC DR EHRENSTORFER™ 標準品">
+                      <img src="assets/lgc-standards.png" alt="LGC DR EHRENSTORFER™ 標準品" width="222" height="167">
+                    </a>
+                    <br>
+                    <span class="product-caption">LGC DR EHRENSTORFER™ 標準品</span>
+                  </h2>
+                  <h2 class="col-4 text-center">
+                    <a data-local-control="true" href="#" title="各式專用濾紙">
+                      <img src="assets/special-filter-papers.png" alt="各式專用濾紙" width="222" height="167">
+                    </a>
+                    <br>
+                    <span class="product-caption">各式專用濾紙</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fcol fcol-3">
+            <div class="container">
+              <div class="edit-area" id="nicedit_2">
+                <h2>&nbsp;</h2>
+              </div>
+            </div>
+          </div>
+          <div class="fcol fcol-4">
+            <div class="container">
+              <div class="edit-area" id="nicedit_3">
+                <div class="row">
+                  <div class="col-1 agency-section">
+                    <p class="other-products-heading section-heading"><img src="assets/other-product.png" alt="代理品牌" width="228" class="section-heading-image"></p>
+                    <div class="agency-brands">
+                      <div class="agency-brand"><img src="assets/lgc-logo.png" alt="LGC Dr. Ehrenstorfer" width="384" height="85" class="agency-logo agency-logo-lgc">
+                        <img src="assets/sigma.png" alt="Sigma-Aldrich" width="195" height="45" class="agency-logo-next"></div>
+                      <div class="agency-brand"><img src="assets/agency-second-logo.png" alt="代理品牌標誌" width="427" height="94" class="agency-logo">
+                        <img src="assets/skytree.png" alt="Skytree 天林智能" width="1040" height="375" class="agency-logo-next agency-logo-skytree"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
