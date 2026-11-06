@@ -92,3 +92,37 @@ window.addEventListener('load', () => {
   initAgencyLogos();
   initCarousel();
 });
+
+
+// Choose the opening direction before a submenu reaches the screen edge.
+function positionSubmenu(item) {
+  const menu = item?.querySelector(':scope > ul.subnav');
+  if (!menu) return;
+  const bounds = item.getBoundingClientRect();
+  const nested = item.parentElement.matches('ul.subnav');
+  if (!menu.querySelector('ul.subnav') && menu.scrollHeight > innerHeight - 24) {
+    menu.style.maxHeight = (innerHeight - 24) + 'px';
+    menu.style.overflowY = 'auto';
+  }
+  const preferredTop = nested ? 0 : bounds.height;
+  const lastTop = innerHeight - bounds.top - menu.offsetHeight - 12;
+  menu.style.top = Math.max(12 - bounds.top, Math.min(preferredTop, lastTop)) + 'px';
+  if (nested) {
+    item.classList.toggle('submenu-flip', bounds.right + menu.offsetWidth > innerWidth - 12);
+  } else {
+    const left = Math.min(10, innerWidth - bounds.left - menu.offsetWidth - 12);
+    menu.style.left = Math.max(12 - bounds.left, left) + 'px';
+  }
+}
+
+document.querySelectorAll('#nav li').forEach(item => {
+  if (!item.querySelector(':scope > ul.subnav')) return;
+  item.addEventListener('pointerenter', () => positionSubmenu(item));
+  item.addEventListener('focusin', () => positionSubmenu(item));
+  item.addEventListener('click', () => positionSubmenu(item));
+});
+
+// Show expansion arrows only where a submenu exists.
+document.querySelectorAll('#nav li.has-subnav').forEach(item => {
+  if (!item.querySelector(':scope > ul.subnav')) item.classList.remove('has-subnav');
+});

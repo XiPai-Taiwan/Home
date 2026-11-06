@@ -244,3 +244,42 @@ body, #wrap { margin: 0px; }
   padding-top: var(--navbar-height, 129px);
   overflow: visible !important;
 }
+/* Keep long labels readable and every menu within the viewport. */
+#nav ul.subnav {
+  width: 380px;
+  max-width: calc(100vw - 24px);
+}
+#nav ul.subnav a {
+  position: relative;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+  padding-right: 36px;
+}
+#nav ul.subnav a span { max-width: none; }
+#nav ul.subnav li.has-subnav > div > a::after,
+#nav ul.subnav li.has-subnav > a::after {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  padding-left: 0;
+}
+#nav li:hover > ul.subnav,
+#nav li:focus-within > ul.subnav,
+#nav li.menu-open > ul.subnav {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+#nav li.submenu-flip > ul.subnav { left: auto; right: 100%; }
+@media (max-width: 767px) {
+  #nav ul.subnav ul.subnav {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    left: auto;
+    right: auto;
+  }
+}
