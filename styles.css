@@ -283,3 +283,6 @@ body, #wrap { margin: 0px; }
     right: auto;
   }
 }
+
+/* Display the complete replacement logo at its native proportions. */
+.main-container .agency-logo-lgc { width:384.3px; max-width:100%; height:auto; aspect-ratio:1600 / 213; object-fit:contain; }
