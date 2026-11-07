@@ -286,3 +286,83 @@ body, #wrap { margin: 0px; }
 
 /* Display the complete replacement logo at its native proportions. */
 .main-container .agency-logo-lgc { width:384.3px; max-width:100%; height:auto; aspect-ratio:1600 / 213; object-fit:contain; }
+
+
+/* Let the complete logo determine its height on narrow screens. */
+@media (max-width: 767px) {
+  #logo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    min-height: 0;
+    line-height: normal;
+    overflow: visible;
+    margin: 0 auto 8px;
+  }
+  #logo a {
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: normal;
+  }
+  #logo img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+  }
+}
+
+
+/* Touch navigation is controlled only by explicit menu-open state. */
+html.touch-navigation #nav ul.subnav {
+  display: none !important;
+  position: static !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: none !important;
+  pointer-events: auto !important;
+  overflow: visible !important;
+  box-shadow: none;
+}
+html.touch-navigation #nav li.menu-open > ul.subnav {
+  display: block !important;
+}
+html.touch-navigation #nav > ul > li > ul.subnav {
+  position: fixed !important;
+  top: var(--navbar-height, 129px) !important;
+  left: 12px !important;
+  right: 12px !important;
+  width: calc(100% - 24px) !important;
+  max-width: calc(100% - 24px) !important;
+  max-height: calc(100vh - var(--navbar-height, 129px) - 12px) !important;
+  max-height: calc(100dvh - var(--navbar-height, 129px) - 12px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+html.touch-navigation #nav ul.subnav li {
+  display: block;
+  width: 100%;
+}
+html.touch-navigation #nav ul.subnav a {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+html.touch-navigation #nav ul.subnav ul.subnav {
+  padding-left: 12px;
+  border-left: 2px solid #c7e3f0;
+}

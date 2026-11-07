@@ -1,30 +1,67 @@
 function initMenu() {
-  const menuItems = [...document.querySelectorAll('#nav li')]
-    .map(item => ({ item, menu: item.querySelector(':scope > ul.subnav'), control: item.querySelector(':scope > a, :scope > div > a') }))
-    .filter(({ menu, control }) => menu && control);
+  const nav = document.querySelector('#nav');
+  if (!nav) return;
+  const touchMode = matchMedia('(max-width: 767px), (hover: none), (pointer: coarse)');
+  const entries = [...nav.querySelectorAll('li')].map(item => ({
+    item,
+    menu: item.querySelector(':scope > ul.subnav'),
+    control: item.querySelector(':scope > a, :scope > div > a')
+  })).filter(entry => entry.menu && entry.control);
+  const controls = new Map(entries.map(entry => [entry.control, entry]));
 
-  function closeMenus() {
-    menuItems.forEach(({ item, control }) => {
-      item.classList.remove('menu-open');
-      control.setAttribute('aria-expanded', 'false');
+  function closeBranch(item) {
+    entries.forEach(entry => {
+      if (item && !item.contains(entry.item)) return;
+      entry.item.classList.remove('menu-open');
+      entry.control.setAttribute('aria-expanded', 'false');
     });
   }
+  function updateMode() {
+    closeBranch();
+    document.documentElement.classList.toggle('touch-navigation', touchMode.matches);
+  }
 
-  menuItems.forEach(({ control }) => {
-    control.setAttribute('aria-haspopup', 'true');
-    control.setAttribute('aria-expanded', 'false');
+  nav.querySelectorAll('li.has-subnav').forEach(item => {
+    if (!item.querySelector(':scope > ul.subnav')) item.classList.remove('has-subnav');
   });
-
+  entries.forEach(entry => {
+    entry.control.setAttribute('aria-haspopup', 'true');
+    entry.control.setAttribute('aria-expanded', 'false');
+    entry.item.addEventListener('pointerenter', () => {
+      if (!touchMode.matches) positionSubmenu(entry.item);
+    });
+    entry.control.addEventListener('focus', () => {
+      if (!touchMode.matches) positionSubmenu(entry.item);
+    });
+  });
   document.addEventListener('click', event => {
-    const control = event.target.closest('a[data-local-control]');
-    if (!control) return closeMenus();
+    const control = event.target.closest('a');
+    if (!nav.contains(event.target)) return closeBranch();
+    if (!control) return;
+    const entry = controls.get(control);
+    if (!entry) {
+      if (control.hasAttribute('data-local-control')) event.preventDefault();
+      else closeBranch();
+      return;
+    }
     event.preventDefault();
-    const entry = menuItems.find(entry => entry.control === control);
-    if (entry) control.setAttribute('aria-expanded', String(entry.item.classList.toggle('menu-open')));
+    const open = !entry.item.classList.contains('menu-open');
+    if (!open) return closeBranch(entry.item);
+    entries.forEach(sibling => {
+      if (sibling.item !== entry.item && sibling.item.parentElement === entry.item.parentElement) {
+        closeBranch(sibling.item);
+      }
+    });
+    entry.item.classList.add('menu-open');
+    control.setAttribute('aria-expanded', 'true');
+    if (!touchMode.matches) positionSubmenu(entry.item);
   });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeMenus();
+    if (event.key === 'Escape') closeBranch();
   });
+  if (touchMode.addEventListener) touchMode.addEventListener('change', updateMode);
+  else touchMode.addListener(updateMode);
+  updateMode();
 }
 
 function initAgencyLogos() {
@@ -95,7 +132,9 @@ window.addEventListener('load', () => {
 
 
 // Choose the opening direction before a submenu reaches the screen edge.
+
 function positionSubmenu(item) {
+  if (document.documentElement.classList.contains('touch-navigation')) return;
   const menu = item?.querySelector(':scope > ul.subnav');
   if (!menu) return;
   const bounds = item.getBoundingClientRect();
@@ -115,14 +154,3 @@ function positionSubmenu(item) {
   }
 }
 
-document.querySelectorAll('#nav li').forEach(item => {
-  if (!item.querySelector(':scope > ul.subnav')) return;
-  item.addEventListener('pointerenter', () => positionSubmenu(item));
-  item.addEventListener('focusin', () => positionSubmenu(item));
-  item.addEventListener('click', () => positionSubmenu(item));
-});
-
-// Show expansion arrows only where a submenu exists.
-document.querySelectorAll('#nav li.has-subnav').forEach(item => {
-  if (!item.querySelector(':scope > ul.subnav')) item.classList.remove('has-subnav');
-});
